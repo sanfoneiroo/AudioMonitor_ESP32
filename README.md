@@ -52,10 +52,12 @@ ESP32
 Saída de áudio analógica
 
 ## Pinagem
-Função .......... Pino ESP32
-Play/Pause ...... GPIO 32
-Próxima faixa ... GPIO 33
-Potenciômetro ... GPIO 35
+
+| Função        | Pino ESP32 |
+|---------------|------------|
+| Play/Pause    |    GPIO 32 |
+| Próxima faixa |    GPIO 33 |
+| Potenciômetro |    GPIO 35 |
 
 ## Controle de Volume
 
