@@ -58,9 +58,13 @@ void loop() {
 
   // ===== POTENCIÔMETRO (VOLUME) =====
   int potValue = analogRead(potPin);     // 0–4095
-  int volume = map(potValue, 0, 4095, 0, 100);
-/*Serial.println(analogRead(potPin));
-delay(200); - DEBUG ADC*/
+  int volume = map(potValue, 0, 4095, 0, 127);
+
+  /* DEBUG ADC 
+  Serial.println(analogRead(potPin));
+  */
+
+  // ===== ATUALIZA VOLUME =====
   if (abs(volume - lastVolume) > 2) {
     a2dp_sink.set_volume(volume);
     lastVolume = volume;
