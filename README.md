@@ -22,18 +22,17 @@ Este projeto terá duas versões de saída de áudio:
 
 **Versão DAC Interno**
 Utiliza o DAC interno do ESP32.
-(Esta versão corresponde ao código atualmente disponível neste repositório.)
 
-**Versão I2S (Futura)**
-Utilizará saída digital I2S com DAC externo para melhor qualidade de áudio.
+**Versão I2S**
+Utiliza saída digital I2S com DAC externo para melhor qualidade de áudio.
 
 ## Funcionalidades
 
 Conexão Bluetooth A2DP Sink
 
-Downmix estéreo → mono
+Áudio Estéreo ou Mono (Downmix)
 
-Controle de volume por ADC (0–100%)
+Controle de volume por ADC
 
 Controle de mídia por botões físicos
 
@@ -63,11 +62,7 @@ Saída de áudio analógica
 
 Leitura ADC: 0–4095
 
-Mapeamento: 0–100
-
-Atualização somente se variação > 2 unidades
-
-Isso evita ruído e excesso de chamadas **set_volume()**.
+Mapeamento: 0–127
 
 ## Fluxo de Funcionamento
 
